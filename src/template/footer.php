@@ -65,64 +65,7 @@
     </div>
   </div>
 </footer>
-<script>
-         $(document).ready(function(){
-         $('#credentials').on('submit',function(e){
-             e.preventDefault();
-                     var u = $('#user').val();
-                     var p = $('#pass').val();
-                     
-              
-              if(u !='' && p !=''){
-                     $.ajax({
-                         url:'credentials_check.php',
-                         method:'POST',
-                         data:{usernames:u,passwords:p},
-                         success:function(datas){
-                             
-                     if(datas=='no'){
-                         alert("incorrect");
-                         
-                     }else if(datas=='yes'){
-                         $('#myModal').modal('hide');
-                         location.reload();
-                         
-                     }    
-                         } //success
-             
-             
-          
-                     }) //ajax
-              }
-         
-         else{
-             alert("Insert Both Field");
-         }
-         
-         
-         
-                     })  //submit
-                     
-                     
-                     
-                     $('#logout').click(function(){
-                             action_flag = "true";
-                         $.ajax({
-                         url:'credentials_check.php',
-                         method:'POST',
-                     
-                         data:{action:action_flag},
-                         success:function(data){
-                             
-                             location.reload();  
-             
-          
-                     } //ajax
-                     })
-          
-         })
-         })   
-</script>
+
 <script src="./asset/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
 </script>

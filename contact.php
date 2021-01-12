@@ -28,7 +28,7 @@ if (!empty($_POST['submit'])) {
     }
 }
 
-$title = 'Contact - Network Days';
+$title = 'Contact';
 include('src/template/header.php');
 ?>
 <section id="contact">
