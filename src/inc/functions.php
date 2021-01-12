@@ -108,9 +108,22 @@ function showJson($data)
  */
 function isLogged()
 {
-    if (!empty($_SESSION['network_days']['user'])) return true;
+    if (!empty($_SESSION['user'])) return true;
     return false;
 }
+
+/**
+ * Déconnecte l'utilisateur actuel.
+ * 
+ * @return void
+ */
+function logout()
+{
+    session_start();
+    $_SESSION['user'] = [];
+    header('Location: ./');
+}
+
 /**
  * SQL
  */

@@ -2,6 +2,8 @@
 <html lang="fr">
 
 <head>
+  <title><?= $title ?> - NetworkDays</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -26,7 +28,7 @@
 
         <!-------------------------------- Début Navbar --------------------------->
         <!-- Lien ves l'accueil en cliquant sur titre -->
-        <a class="navbar-brand text-white" href="#">Network Days</a>
+        <a class="navbar-brand text-white" href="./">Network Days</a>
         <!-- Fin de lien  -->
 
         <!-- Bouton du menu burger en mode responsive -->
@@ -38,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link text-white" href="#">Accueil</a>
+              <a class="nav-link text-white" href="./">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="aboutus.html">Qui sommes-nous ?</a>
