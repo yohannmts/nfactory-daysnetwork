@@ -1,0 +1,506 @@
+/* ========================= RESET ===========================================  */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =============================== FIN DU RESET ============================= */
+
+/* CSS perso */
+
+/* =========================== ROOT ============================================= */
+
+:root {
+	--white: #fff;
+	--pink: #ba2480;
+	--black: #000;
+	--darkblue: #17202A;
+	--bold: 700;
+	--lightgrey: lightgrey;
+	--grey: grey;
+}
+
+/* ============================ WEBKIT ======================================  */
+
+::-webkit-scrollbar-track {
+	background: var(--pink);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--darkblue);
+	height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+	height: 30px;
+}
+
+/* ============================== GENERALITES =============================== */
+
+html, body {
+	font-family: Roboto, lucida grande, lucida sans unicode, Arial, sans-serif;
+	height: 100%;
+	width: 100%;
+	scrollbar-color: var(--darkblue) var(--pink);
+	color: #F5E6C7;
+	padding-top: 66px;
+}
+
+/* =============================== HEADER  ============================ */
+
+/* ++++++++++++++++++ NAVBAR +++++++++++++ */
+
+.navbar .container img {
+	width: 120px;
+	margin-top: -3px;
+}
+
+.navbar {
+	font-size: 20px;
+}
+
+.navbar-brand {
+	font-size: 35px;
+}
+
+.navbar {
+	background-color: #17202A;
+}
+
+.nav-item a:hover {
+	background-color: grey;
+	border-radius: 4px;
+	font-size: 1.7vw;
+	letter-spacing: 5px;
+	transition: 1.5s;
+}
+
+.wrap {
+	background: lightgrey;
+	color: --black;
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+.wrap .centre-h1 {
+	font-size: 50px;
+	padding: 0 50px;
+	border: 5px ridge --black;
+	text-decoration: underline;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #16212B;
+	padding-top: 30px;
+}
+
+.wrap .groupe {
+	font-size: 20px;
+	padding: 0 300px;
+}
+
+.wrap p {
+	line-height: 30px;
+}
+
+/*  ======================= PAGE 2 : Qui nous sommes ? ========================== */
+
+/* NOUS SOMMES NETWORK DAYS */
+
+.titrepage {
+	color: var(--pink);
+	font-size: 50px;
+}
+
+h1 {
+	font-size: 50px;
+	margin-top: 50px;
+}
+
+.centre-h1 {
+	text-align: center;
+	border: 5px ridge --black;
+	text-decoration: underline;
+}
+
+/*  =================   description entreprise slides ====================== */
+
+#flex1 img {
+	width: 80%;
+}
+
+/*  ==================== COULEUR DE FOND FLEXSLIDER ======================== */
+
+.slides {
+	background-color: grey;
+}
+
+/* ====================== flexslider image description ========================*/
+
+.wrap-wrap {
+	max-width: 800px;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+/* ====================== description sur la droite de l'image =====================*/
+
+.picture-left {
+	float: left;
+}
+
+.flex-caption {
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+/* fin flexslider image description */
+
+.descrip-1 img {
+	width: 200px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.img2 img {
+	width: 200px;
+	margin-top: 10px;
+}
+
+.img3 img {
+	width: 200px;
+	margin-top: 10px;
+}
+
+.image-contenu {
+	display: flex
+}
+
+.droite-dev2 {
+	margin-left: 100px;
+}
+
+.flex-caption {
+	font-size: 20px;
+}
+
+/*VALEURS DE L'ENTREPRISE */
+
+/* flipping animation */
+
+/* entire container, keeps perspective */
+
+.flip-container {
+	perspective: 1000;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 420px;
+	height: 340px;
+	margin: 1em auto;
+}
+
+/* flip speed goes here */
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* entire container, keeps perspective */
+
+.flip {
+	display: flex;
+	width: 100%;
+	height: 490px;
+	/* background: linear-gradient(to right, #0094cd, #0094cd, #b1d9cc); */
+}
+
+.flip-container {
+	perspective: 1000;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 440px;
+	height: 360px;
+	margin: 1em auto;
+}
+
+/* flip speed goes here */
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: cornSilk;
+	text-align: center;
+	font: 3em/50px 'Helvetica Neue', Helvetica, sans-serif;
+	box-shadow: -5px 5px 5px #fff;
+}
+
+.back1 {
+	color: var(--black);
+	text-align: center;
+	padding: 0 15px;
+}
+
+.back1 h3 {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+/* front pane, placed above back */
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background: lightgrey;
+}
+
+.front i {
+	/* color: #0094cd; */
+	padding-top: 155px;
+}
+
+/* back, initially hidden pane */
+
+.back {
+	transform: rotateY(180deg);
+	background: var(--grey);
+}
+
+.back1 {
+	font-size: 18px;
+}
+
+.valeurs {
+	text-align: center;
+	padding-top: 30px;
+	/* background: linear-gradient(to right, #0094cd, #0094cd, #b1d9cc); */
+}
+
+.valeurs {
+	border: 5px ridge --black;
+	font-size: 50px;
+	text-transform: uppercase;
+	color: var(--pink);
+}
+
+/* présentation de l'équipe */
+
+.wrap3 {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(lightgrey, grey)
+}
+
+.wrap3 h1 {
+	border: 5px ridge --black;
+	text-decoration: underline;
+	font-size: 40px;
+}
+
+.wrap3 .equipe {
+	text-align: center;
+	font-size: 2.25em;
+	line-height: 1.05em;
+	margin: .5em 0;
+	color: rgb(22, 33, 43);
+	margin: 60px 0;
+	text-transform: uppercase;
+}
+
+.dev {
+	display: flex;
+}
+
+.dev .us {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.us h2 {
+	font-size: 30px;
+	color: black;
+	text-align: center;
+}
+
+#namedev {
+	color: #ba2480;
+}
+
+#shad {
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.us h3 {
+	font-size: 18px;
+	color: rgb(36, 35, 35);
+	display: flex;
+	justify-content: center;
+	padding-bottom: 25px;
+}
+
+.wrap3 img {
+	margin-left: 80px;
+	width: 250px;
+	border-radius: 50%;
+	border: 2px solid #ba2480;
+}
+
+.wrap3 .demba {
+	height: 255px;
+	width: 255px;
+}
+
+.wrap3 p {
+	padding: 40px 80px 25px;
+	font-style: oblique;
+	font-weight: 700;
+	font-size: 20px;
+	color: rgb(70, 60, 60);
+	display: flex;
+	justify-content: center;
+}
+
+.titrepage {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.8vmax;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+#presentation {
+	text-align: center;
+	font-size: 1rem;
+}
+
+#presentation p {
+	margin-bottom: 50px;
+}
+
+/* ====================== FOOTER  ================================== */
+
+.site-footer {
+	padding-top: 35px;
+	background-color: #17202A;
+	color: #F5E6C7;
+	font-size: 17px;
+}
+
+.footer-heading {
+	font-size: 20px;
+}
+
+.list-unstyled a:hover {
+	background-color: #ba2480;
+	border-radius: 4px;
+	color: white;
+	font-size: 1.7vw;
+	letter-spacing: 3px;
+	font-size: 15px;
+	transition: 1s;
+}
+
+.border-top {
+	padding-bottom: 20px;
+}
+
+.col-md-3 {
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.reseaux-sociaux {
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+
+.reseaux-sociaux img {
+	height: 22px;
+	width: 22px;
+	margin: 0 2px;
+}
+
+.col-md-2 a, .col-md-5 a {
+	color: #ba2480;
+}
+
+h5 {
+	font-size: 90px;
+	padding-bottom: 600px;
+}
+
+
+/* formulaire contact */
+
+/* mentions légales */
+.legal-content p {
+	color:rgba(0, 0, 0, 0.75)
+}
+/* style page de coonexion */
