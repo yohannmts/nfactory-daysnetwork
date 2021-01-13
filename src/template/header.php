@@ -19,7 +19,7 @@
   <!--====================== début du header  ================================-->
   <header>
     <!---------------------------- MENU BURGER --------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
       <div class="container">
 
         <!------------- Début Logo  ----------->
@@ -49,7 +49,7 @@
               <a class="nav-link text-white" href="faq.php">F.A.Q</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="contact.php/">Nous contacter</a>
+              <a class="nav-link text-white" href="contact.php">Nous contacter</a>
             </li>
           </ul>
         </div>

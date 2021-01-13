@@ -158,7 +158,7 @@ function insert($pdo, $table, $columns, $values)
 }
 
 /**
- * Séléctionne une valeur dans la table d'une base de donnée.
+ * Sélectionne une valeur dans la table d'une base de donnée.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -179,7 +179,7 @@ function select($pdo, $table, $selectedColumn = '*', $whereColumn = null, $where
 }
 
 /**
- * Séléctionne des valeurs dans la table d'une base de donnée.
+ * Sélectionne des valeurs dans la table d'une base de donnée.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -239,3 +239,13 @@ function delete($pdo, $table, $whereColumn, $whereValue)
     $query->bindValue(':whereValue', $whereValue);
     $query->execute();
 }
+
+
+/**
+ * Vérifie si un utilisateur est connecté en tant qu'administrateur.
+ */
+// function isAdmin()
+// {
+//     if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
+//     return false;
+// }

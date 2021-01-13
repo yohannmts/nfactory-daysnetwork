@@ -28,39 +28,133 @@ if (!empty($_POST['submit'])) {
     }
 }
 
+
+// if (!isAdmin()) {
+//     header('Location: ./../error.php?e=403');
+//     die();
+// }
+
+// if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && !empty(select($pdo, 'nd_contact', '*', 'id', $_GET['delete']))) delete($pdo, 'nd_contact', 'id', $_GET['delete']);
+
+// $contact = selectAll($pdo, 'nd_contact', '*', null, null, 'created_at', 'DESC');
 $title = 'Contact';
-include('src/template/header.php');
-?>
-<section id="contact">
-    <div class="wrap-fluid">
-        <div class="contact-form">
-            <form action="" method="POST">
 
-                <div class="inputs-container">
-                    <input type="mail" name="mail" placeholder="Votre mail" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
-                                                                                    elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
-                                                                                    elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail'];
-                                                                                     ?>">
-                    <input type="text" name="firstname" placeholder="Votre prénom" value="<?php if (!empty($_POST['firstname'])) echo $_POST['firstname'];
-                                                                                            elseif (!empty($_SESSION['user']['firstname'])) echo $_SESSION['user']['firstname']; ?>">
-                </div>
-                <div class="inputs-container">
-                    <input type="text" name="lastname" placeholder="Votre nom" value="<?php if (!empty($_POST['lastname'])) echo $_POST['lastname'];
-                                                                                        elseif (!empty($_SESSION['user']['lastname'])) echo $_SESSION['user']['lastname']; ?>">
-                    <input type="text" name="subject" placeholder="Votre motif" value="<?= (!empty($_POST['subject'])) ? $_POST['subject'] : '' ?>">
-                </div>
-                <textarea name="message" placeholder="Votre message"><?= (!empty($_POST['message'])) ? $_POST['message'] : '' ?></textarea>
-                <?php if ($sent == false) : ?>
-                    <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
-                <?php else : ?>
-                    <input type="submit" class="btn btn-success" value="Bien reçu !" disabled>
-                <?php endif; ?>
-            </form>
+
+include('src/template/header.php'); ?>
+
+<div class="fond_gradient">
+    <div class="container">
+        <div class="row">
+            <div id="contact_page" class="col-sm-6 fond_dark_blue blanc aos-init aos-animate" data-aos="fade-right" data-aos-once="true" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div id="contactp" class="padding-05v"></div>
+                <h1>Network Days, partenaire de proximité des entreprises et collectivités en Seine-Maritime pour leurs solutions informatiques. Contactez-nous !</h1><br><br><br>
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                    <div class="field-items">
+                        <div class="contactnum field-item even" property="content:encoded">
+                            <h2>
+                                Support technique<br>
+                                un numéro unique pour nous joindre : </h2>
+                            <a href="tel:+33123456789">01 23 45 67 89</a><br>
+                            Du lundi au vendredi<br>
+                            de 8h30 à 12h et de 14h à 17h30<br>
+                        </div>
+                    </div>
+                </div> <br>
+            </div>
+
+            <div id="contact_form" class="col-sm-6 fond_gris aos-init aos-animate" data-aos="fade-left" data-aos-once="true" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <form class="webform-client-form webform-client-form-5" action="" method="post" id="webform-client-form-5" accept-charset="UTF-8">
+                    <div>
+
+                        <!-- formulaire de contact -->
+                        <div class="formcontact row no-padding text-center">
+                            <div class="col-sm-12 no-padding">
+                                <div class="padding-03">
+                                    <small class="text-muted dark_blue">Les champs marqués d'une * sont requis.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row no-padding">
+                            <div class="col-xs-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-textfield webform-component--nom form-group form-item form-item-submitted-nom form-type-textfield form-group"> <label class="control-label" for="edit-submitted-nom">Nom<span class="form-required" title="Ce champ est requis.">*</span></label>
+                                        <input required="" class="form-control form-text required" type="text" id="edit-submitted-nom" name="submitted[nom]" value="" size="128" maxlength="128">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-textfield webform-component--prenom form-group form-item form-item-submitted-prenom form-type-textfield form-group"> <label class="control-label" for="edit-submitted-prenom">Prénom* </label>
+                                        <input class="form-control form-text" type="text" id="edit-submitted-prenom" name="submitted[prenom]" value="" size="60" maxlength="128">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-textfield webform-component--mail form-group form-item form-item-submitted-mail form-type-textfield form-group"> <label class="control-label" for="edit-submitted-mail">Mail*</label>
+                                        <input class="form-control form-text" type="text" id="edit-submitted-mail" name="submitted[mail]" value="" size="60" maxlength="150">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-telephone webform-component--telepone form-group form-item form-item-submitted-telephone form-type-webform-telephone form-group"> <label class="control-label" for="edit-submitted-telephone">Téléphone*</label>
+                                        <input required="" class="telephone form-control form-text form-email required" type="tel" id="edit-submitted-telephone" name="submitted[telephone]" size="60">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-sujet webform-component--sujet form-group form-item form-item-submitted-sujet form-type-webform-sujet form-group"> <label class="control-label" for="edit-submitted-sujet">Le sujet de votre demande<span class="form-required" title="Ce champ est requis.">*</span></label>
+                                        <input required="" class="sujet form-control form-text form-sujet required" type="text" id="edit-submitted-sujet" name="submitted[sujet]" size="100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="padding-03">
+                                    <div class="form-item webform-component webform-component-textarea webform-component--message form-group form-item form-item-submitted-message form-type-textarea form-group"> <label class="control-label" for="edit-submitted-message">Votre message<span class="form-required" title="Ce champ est requis.">*</span></label>
+                                        <div class="form-textarea-wrapper"><textarea required="required" class="form-control form-textarea required" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5"></textarea></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div class="row no-padding text-justify">
+                            <div class="col-sm-12 no-padding">
+                                <div class="legaldata" padding-03">
+                                    <!-- Informations légales -->
+                                    <small>
+                                        Les informations recueillies sur ce formulaire sont enregistrées et transmises à <strong>Network Days</strong>.
+
+                                        <p>
+                                            Elles sont conservées pendant 120 jours sur le site web en cas de problèmes techniques et sont destinées aux ressources humaines.
+                                        </p>
+
+                                        <p>
+                                            Conformément à la <a href="https://www.cnil.fr/fr/loi-78-17-du-6-janvier-1978-modifiee" target="_blank">loi « informatique et libertés »</a>, vous pouvez exercer votre droit d'accès aux données vous concernant et les faire rectifier en contactant :<br><br>
+                                            <strong>Network Days</strong><br>
+                                            76 boulevard Jeanne d'Arc la pucelle<br>
+                                            76000 ROUEN
+                                        </p>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php if ($sent == false) : ?>
+                        <input type="submit" name="submit" class="submitcontact btn btn-purple" value="Envoyer">
+                    <?php else : ?>
+                        <input type="submit" class=" submitsuccess btn btn-success" value="Bien reçu !" disabled>
+                    <?php endif; ?>
+                </form>
+            </div>
         </div>
-        <!-- <div class="contact-image">
-            <img src="" alt="Image de contact">
-        </div> -->
     </div>
-</section>
+</div>
 
-<?php include('src/template/footer.php');
+<?php
+include('src/template/footer.php');

@@ -393,6 +393,7 @@ h1 {
 
 #shad {
 	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	margin-top: 1px;
 }
 
 .us h3 {
@@ -436,10 +437,16 @@ h1 {
 #presentation {
 	text-align: center;
 	font-size: 1rem;
+	line-height: 26px;
 }
 
 #presentation p {
 	margin-bottom: 50px;
+	font-size: 18px;
+}
+
+#futur {
+	line-height: 26px;
 }
 
 /* ====================== FOOTER  ================================== */
@@ -496,11 +503,70 @@ h5 {
 	padding-bottom: 600px;
 }
 
-
 /* formulaire contact */
 
-/* mentions légales */
-.legal-content p {
-	color:rgba(0, 0, 0, 0.75)
+.fond_gradient {
+	background: linear-gradient(grey, #757F9A);
 }
+
+h1 {
+	font-size: 40px;
+	text-transform: none;
+	font-weight: 700;
+}
+
+.contactnum {
+	font-size: 20px;
+}
+
+.contactnum a {
+	color: var(--pink);
+	font-weight: 900;
+}
+
+.legaldata {
+	padding-bottom: 40px;
+	font-weight: 700;
+}
+
+.legaldata a {
+	color: var(--pink);
+	font-weight: 700;
+}
+
+.submitcontact, .submitsuccess {
+	margin-bottom: 25px;
+
+}
+
+/* faq */
+
+#faqgradient {
+	background: linear-gradient(grey, #757F9A);
+	color: var(--white);
+}
+
+#faq h1 {
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+
+#faq h2 {
+	margin-top: 10px;
+	font-size: 25px;
+}
+
+#faq p {
+	margin-top: 10px;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+/* mentions légales */
+
+.legal-content p {
+	color: rgba(0, 0, 0, 0.75)
+}
+
 /* style page de coonexion */
