@@ -64,11 +64,7 @@ include('src/template/header.php');
 
 <!-- carousel -->
 <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-   <ol class="carousel-indicators">
-      <li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>
-      <li data-slide-to="1" data-target="#carouselExampleIndicators"></li>
-      <!-- <li data-slide-to="2" data-target="#carouselExampleIndicators"></li> -->
-   </ol>
+   
    <div class="carousel-inner">
       <div class="carousel-item active">
          <img alt="First slide" class="d-block w-100" style="width: 1000px;height: 500px;" src="asset/img/font-reseaux.jpg">
