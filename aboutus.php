@@ -11,7 +11,7 @@ include('src/template/header.php');?>
 
             </div>
             <div class="row">
-                <div class="col-12 p-3 mt-3 mb-1 " id="presentation">
+                <div class="col-12 p-3 mt-3 mb-1" id="presentation">
                     <p>Fondé en 2020 dans l'agglomération de Rouen, Network DAYS s'attèle à vous apporter des solutions informatiques adaptées à vos besoins.</p>
                     <p>Nos collaborateurs placent le client au cœur de leurs préoccupations pour faire de leur projet une réussite. Passionnés de technologies, nous sommes en veille permanente pour apporter les innovations qui sauront transformer votre business pour plus de performance. Nous avons pour ambition de développer des partenariats de proximité afin de développer des relations durables et de qualités. En s’appuyant sur les compétences et les expériences de chacun de nos collaborateurs, notre organisation à taille humaine nous permet d’être à votre écoute au quotidien.</p>
                 </div>
