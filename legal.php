@@ -5,7 +5,7 @@ session_start();
 $title = 'Mentions légales - Network Days';
 include('src/template/header.php'); ?>
 
-<section id="legal">
+<section id="legalmention">
     <div class="wrap-solid">
         <div class="legal-content">
             <h1>Mentions légales</h1>
