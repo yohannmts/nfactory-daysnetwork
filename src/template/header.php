@@ -12,6 +12,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
   <link href="asset/css/style.css" rel="stylesheet">
+  
 
 
 <body>
@@ -59,3 +60,9 @@
   </header>
   </nav>
   <!--==================== Fin du header  ====================================-->
+
+
+
+
+
+

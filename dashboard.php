@@ -25,12 +25,11 @@ if (!empty($_POST['logout'])) logout();
     </div>
 </form>
     <canvas id="chart-area" height="90%" class="color-graphique" style="background-color: white"></canvas><br>
-    
 
 
 
-<div class="data text-dark bg-secondary
-"></div>
+
+<div class="data text-dark bg-secondary"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>

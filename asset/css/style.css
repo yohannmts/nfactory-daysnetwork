@@ -141,6 +141,31 @@ html, body {
 	line-height: 30px;
 }
 
+
+@media only screen and (max-width: 500px) {
+    .front {
+        justify-content: center;
+    }
+    .front {
+        width: 300px;
+        margin-bottom: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*  ======================= PAGE 2 : Qui nous sommes ? ========================== */
 
 /* NOUS SOMMES NETWORK DAYS */
@@ -322,7 +347,6 @@ h1 {
 	/* color: #0094cd; */
 	padding-top: 155px;
 }
-
 /* back, initially hidden pane */
 
 .back {
@@ -333,7 +357,10 @@ h1 {
 .back1 {
 	font-size: 18px;
 }
+.back1 h3 {
+    color: var(--pink);
 
+}
 .valeurs {
 	text-align: center;
 	padding-top: 30px;
@@ -346,6 +373,9 @@ h1 {
 	text-transform: uppercase;
 	color: var(--pink);
 }
+
+
+
 
 /* présentation de l'équipe */
 
@@ -549,11 +579,18 @@ h1 {
 	font-size: 40px;
 	font-weight: 700;
 	margin-bottom: 50px;
+	color: var(--pink);
 }
 
 #faq h2 {
 	margin-top: 10px;
 	font-size: 25px;
+	color: var(--black);
+}
+
+#faq h3 {
+	color: var(--pink);
+
 }
 
 #faq p {
@@ -590,3 +627,5 @@ h1 {
 }
 
 /* style page de coonexion */
+
+

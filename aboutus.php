@@ -58,6 +58,7 @@ include('src/template/header.php');?>
                             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                                 <div class="flipper">
                                     <div class="front">
+                                    <img src="asset/img/client-centre.jpg" alt="">
                                         <!-- front content -->
                                         <i class="fas fa-users"></i>
                                     </div>
@@ -78,6 +79,7 @@ include('src/template/header.php');?>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <div class="front">
+                                <img src="asset/img/esprit-dequipe.jpg" width="95%" height="95%" alt="">
                                     <!-- front content -->
                                     <i class="fas fa-hands-helping"></i>
                                 </div>
@@ -98,13 +100,14 @@ include('src/template/header.php');?>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <div class="front">
+                                <img src="asset/img/Client_roi-1.jpg" width="95%" height="90%" alt="">
                                     <!-- front content -->
                                     <i class="fas fa-hand-holding-heart"></i>
                                 </div>
                                 <div class="back">
                                     <!-- back content -->
                                     <div class="back1">
-                                        <h3> Nous dépassons les attentes des clients</h3><br>
+                                        <h3 class="style__valeurs"> Nous dépassons les attentes des clients</h3><br>
                                         <p>Nous aspirons à surprendre et impressionner tous ceux qui ont affaire à nous.
                                         </p><br>
                                     </div>
@@ -116,14 +119,15 @@ include('src/template/header.php');?>
                         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                             <div class="flipper">
                                 <div class="front">
+                                <img alt="Identifying bandwidth hogs" width="105%" height="80%" src="https://hlassets.paessler.com/common/files/icons/star-cyan.svg" width="80">
                                     <!-- front content -->
                                     <i class="far fa-grin"></i>
                                 </div>
                                 <div class="back">
                                     <!-- back content -->
                                     <div class="back1">
-                                        <h3> Nous dépassons les attentes des clients</h3><br>
-                                        <p>Nous aspirons à surprendre et impressionner tous ceux qui ont affaire à nous.
+                                        <h3> Nous visons l’excellence</h3><br>
+                                        <p>Nous remettons systématiquement en question nos pratiques et solutions pour faire rimer PRTG avec qualité.
                                         </p><br>
                                     </div>
                                 </div>
@@ -131,7 +135,7 @@ include('src/template/header.php');?>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><br><br>
             <!-- PRESENTATION DE L'EQUIPE -->
             <div class="row">
                 <div class="col border rounded ml-3 mr-3 mb-3">
