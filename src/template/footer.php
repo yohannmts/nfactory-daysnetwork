@@ -29,7 +29,7 @@
                 <h2 class="footer-heading mb-4">Liens</h2>
                 <ul class="list-unstyled">
                   <li><a href="legal.php" target="blanck" class="smoothscroll">Mentions légales </a></li><br>
-                  <li><a href="faq.html" target="C'est nous" class="smoothscroll">F.A.Q</a></li><br>
+                  <li><a href="faq.php" target="C'est nous" class="smoothscroll">F.A.Q</a></li><br>
                   <li><a href="contact.php" target="C'est nous" class="smoothscroll">Contact
                       Us</a></li><br>
                 </ul>

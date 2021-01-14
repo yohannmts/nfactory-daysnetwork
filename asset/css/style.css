@@ -536,7 +536,6 @@ h1 {
 
 .submitcontact, .submitsuccess {
 	margin-bottom: 25px;
-
 }
 
 /* faq */
@@ -564,6 +563,27 @@ h1 {
 }
 
 /* mentions légales */
+
+#legal {
+	background: linear-gradient(grey, #757F9A);
+	margin-top: -49px;
+}
+
+#legal h1, h2, h3, p {
+	color: rgba(0, 0, 0, 0.75);
+}
+
+#legal h1, h3 {
+	font-weight: 700;
+}
+
+#legal h3 {
+	margin-top: 18px;
+}
+
+#legal a {
+	color: #ba2480;
+}
 
 .legal-content p {
 	color: rgba(0, 0, 0, 0.75)
