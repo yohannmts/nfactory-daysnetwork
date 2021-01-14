@@ -172,7 +172,6 @@ const formatIntDouble = (int) => {
 const hexToIpv4 = (ip) => {
     ip.replace(/\r\n/g, '\n');
     var lines = ip.split('\n');
-
     var output = '';
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];

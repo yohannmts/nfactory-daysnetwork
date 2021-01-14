@@ -13,8 +13,13 @@ if (!empty($_POST['submit'])) {
    $errors = checkEmail($errors, $mail, 'mail');
    $errors = checkField($errors, $mail, 'mail', 6, 160);
    $errors = checkField($errors, $password, 'password', 6, 200);
+ 
+
 
    $user = select($pdo, 'nd_users', '*', 'mail', $mail);
+  
+  
+
    if (count($errors) == 0) {
       if (!empty($user)) {
          if (password_verify($password, $user['password'])) {
@@ -55,9 +60,12 @@ if (!empty($_POST['submit'])) {
          die();
       }
    }
+
 }
 
 if (!empty($_POST['logout'])) logout();
+
+
 
 $title = 'Accueil';
 include('src/template/header.php');
@@ -65,7 +73,7 @@ include('src/template/header.php');
 
 <!-- carousel -->
 <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-   
+
    <div class="carousel-inner">
       <div class="carousel-item active">
          <img alt="First slide" class="d-block w-100" style="width: 1000px;height: 500px;" src="asset/img/font-reseaux.jpg">
@@ -90,7 +98,7 @@ include('src/template/header.php');
       <?php else : ?>
          <button id="btnclick" type="submit"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Se connecter</button>
       <?php endif; ?>
-      <!-- Modal -->
+      <!-- Modal connexion -->
       <div class="modal fade" id="myModal" role="dialog">
          <div class="modal-dialog">
             <!-- Modal content-->
@@ -110,6 +118,43 @@ include('src/template/header.php');
                      <input type="submit" class="btn btn-success" name="submit" value="Login">
                   </form>
                </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- Modal inscription-->
+   <!-- 
+   <button type="button" class="btn btn-success btn-lg" data-toggle="modal2" data-target="#myModalInscription">S'inscrire</button>
+    -->
+
+
+   <div class="modal fade" id="myModalInscription" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal2">&times;</button>
+               <h4 class="modal-title">Inscription</h4>
+            </div>
+            <div class="modal-body">
+               <form id="register" method="POST" action="">
+                  <label> Votre nom</label>
+                  <input type="text" name="lastname" placeholder="Votre nom" value="<?= (!empty($_POST['lastname'])) ? $_POST['lastname'] : '' ?>">
+                  <label> Votre prénom</label>
+                  <input type="text" name="firstname" placeholder="Votre prénom" value="<?= (!empty($_POST['firstname'])) ? $_POST['firstname'] : '' ?>">
+                  <br>
+                  <label>Votre email</label>
+                  <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
+                                                                                    elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>"> <br>
+                  <label>Votre mot de passe</label>
+                  <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
+                  <br>
+                  <label>Confirmation du mot de passe</label>
+                  <input type="password" name="password2" placeholder="Confirmation du mot de passe" value="<?= (!empty($_POST['password2'])) ? $_POST['password2'] : '' ?>">
+                  <input type="submit" class="btn btn-success" name="submit2" value="S'inscrire">
+               </form>
             </div>
          </div>
       </div>

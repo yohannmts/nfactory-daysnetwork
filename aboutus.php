@@ -23,18 +23,18 @@ include('src/template/header.php');?>
                         <img class="d-block w-100" src="asset/img/img-about-3.png" style="height: 500px;"
                             alt="First slide">
                         <div class="txtflex">
-                            <p class="text-center flex-caption"> Nous sommes une entreprise spécialisée dans le réseau informatique, nous réglons les soucis que vous pouvez être amener à avoir dans le futur</p>
+                            <p id="futur"class="text-center flex-caption"> Nous sommes une entreprise spécialisée dans le réseau informatique, nous réglons les soucis que vous pouvez être amener à avoir dans le futur</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="asset/img/img-about-4.png" style="height: 500px;"
                             alt="Second slide">
-                        <p class="text-center flex-caption">Nous tentons de régler les différents problèmes de communication entre votre PC et internet pour que vous puissiez naviguer sur le Web sans problème et que vos recherches soit plus fluides</p>
+                        <p id="futur" class="text-center flex-caption">Nous tentons de régler les différents problèmes de communication entre votre PC et internet pour que vous puissiez naviguer sur le Web sans problème et que vos recherches soit plus fluides</p>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="asset/img/img-about-1.png" style="height: 500px;"
                             alt="Third slide">
-                        <p class="text-center flex-caption">Au niveau de l'installation et du branchement des différents câbles sur votre PC. Si vous avez besoin, nous nous occupons de cela en sachant que les câbles n'ont pas la même signification.</p>
+                        <p id="futur" class="text-center flex-caption">Au niveau de l'installation et du branchement des différents câbles sur votre PC. Si vous avez besoin, nous nous occupons de cela en sachant que les câbles n'ont pas la même signification.</p>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
