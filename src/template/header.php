@@ -21,7 +21,7 @@
     <!---------------------------- MENU BURGER --------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-
+     
         <!------------- Début Logo  ----------->
         <img src="asset/img/logo-rose.png" alt="logo-rose">
         <!------------ Fin de logo  ----------->
@@ -44,9 +44,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="aboutus.php">Qui sommes-nous ?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="dashboard.php">  </a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="faq.php">F.A.Q</a>

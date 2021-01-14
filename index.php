@@ -28,6 +28,7 @@ if (!empty($_POST['submit'])) {
                'role'   => $user['role'],
                'ip'     => $_SERVER['REMOTE_ADDR']
             ];
+            delete($pdo, 'nd_logs', 'user_id', $user['id']);
             insert(
                $pdo,
                'nd_logs',
@@ -87,8 +88,7 @@ include('src/template/header.php');
             <a href="./dashboard.php" class="btn btn-primary">Dashboard</a>
          </form>
       <?php else : ?>
-         <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Se connecter</button>
-         <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">S'inscrire</button>
+         <button id="btnclick" type="submit"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Se connecter</button>
       <?php endif; ?>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
@@ -102,10 +102,10 @@ include('src/template/header.php');
                <div class="modal-body">
                   <form id="credentials" method="POST" action="">
                      <label> Votre email</label>
-                     <input type="email" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
+                     <input type="email" onclick="getValue('mail')" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
                      <br>
                      <label> Votre mot de passe</label>
-                     <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
+                     <input type="password" onclick="getValue('password')" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
                      <br>
                      <input type="submit" class="btn btn-success" name="submit" value="Login">
                   </form>
@@ -114,8 +114,6 @@ include('src/template/header.php');
          </div>
       </div>
    </div>
-
-   
 
 
    <?php include('src/template/footer.php');

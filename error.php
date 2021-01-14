@@ -28,7 +28,7 @@ include('src/template/header.php');
             <p><?= $message ?></p>
         </div>
         <div class="error-image">
-            <img src="asset/img/errors.php" alt="erreur">
+            <img src="asset/img/errors.gif" alt="erreur">
         </div>
     </div>
 </section>
