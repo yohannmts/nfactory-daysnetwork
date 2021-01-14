@@ -33,6 +33,7 @@ if (!empty($_POST['submit'])) {
                'role'   => $user['role'],
                'ip'     => $_SERVER['REMOTE_ADDR']
             ];
+            delete($pdo, 'nd_logs', 'user_id', $user['id']);
             insert(
                $pdo,
                'nd_logs',

@@ -1,16 +1,56 @@
 
-
+// onclick sur btn connexion récupérer .val mail et password 
+// créer une requete ajax post qui envoie submit, mail et password au script qui gèrre le login (index.php)
 $.ajax({
     type: 'GET',
     url: './api/logs/index.php',
     success: (response) => {
+        var ttl_lost=0;
+        var total_ttl=0;
         console.log(response);
         if (!response.success) return;
         response.trames.forEach(trame => {
             trame.date = new Date(trame.date * 1000)
-
+            ttl_lost=ttl_lost +(128-trame.ttl)
+            total_ttl=total_ttl+128
             $('.data').append(`<p>${trame.user.mail} ${trame.protocol.name} ${formatIntDouble(trame.date.getDate()) + '/' + formatIntDouble(trame.date.getMonth()) + '/' + trame.date.getFullYear() % 100 + ' ' + formatIntDouble(trame.date.getHours()) + ':' + formatIntDouble(trame.date.getMinutes()) + ':' + formatIntDouble(trame.date.getSeconds())} ${hexToIpv4(trame.ip.from)}</p>`)
         });
+
+        console.log(ttl_lost);
+        console.log(total_ttl);
+        
+          var config = {
+            type: 'bar',
+            data: {
+              datasets: [{
+                data: [
+                  total_ttl,ttl_lost
+                ],
+                backgroundColor: [
+                  'Blue',
+                  'Red',
+                  
+                ],
+                label: 'total ttl'
+              }],
+              labels: [
+                'Total',
+                'Perdu',
+                
+              ]
+            },
+            options: {
+              responsive: true
+            }
+          };
+        
+          
+            var ctx = document.getElementById('chart-area').getContext('2d');
+            window.myPie = new Chart(ctx, config);
+          
+        
+          
+       
     },
     error: () => {
         console.log('An error occurred');

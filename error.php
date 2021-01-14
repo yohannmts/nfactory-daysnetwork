@@ -18,7 +18,7 @@ switch ($error) {
         $message = 'Ressource non trouvée';
         break;
 }
-$title = ' Erreur ' . $error . ' - Network-days';
+$title = ' Erreur ' . $error . ' - NetworkDays';
 include('src/template/header.php');
 ?>
 <section id="error">
@@ -27,9 +27,15 @@ include('src/template/header.php');
             <h1>Erreur <?= $error ?></h1>
             <p><?= $message ?></p>
         </div>
+<<<<<<< HEAD
         <!-- <div class="error-image">
             <img src="asset/img/errors.gif" alt="erreur">
         </div> -->
+=======
+        <div class="error-image">
+            <img src="asset/img/errors.gif" alt="erreur">
+        </div>
+>>>>>>> 1d4bebb343a486c6f272523ec692f8e5e60f630f
     </div>
 </section>
 <?php
