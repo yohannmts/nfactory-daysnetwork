@@ -180,18 +180,17 @@ include('src/template/header.php');
                <div class="modal-body">
                   <form id="credentials" method="POST" action="">
                      <label> Votre email</label>
-                     <input type="email" onclick="getValue('mail')" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
+                     <input  type="email" onclick="getValue('mail')" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
                      <br>
                      <label> Votre mot de passe</label>
                      <input type="password" onclick="getValue('password')" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
                      <br>
-                     <input type="submit" class="btn btn-success" name="submit" value="Login">
+                     <input  type="submit" id="boutton" class="btn btn-success" name="submit" value="Se connecter"  onclick="controle('connecter')">
                   </form>
                </div>
             </div>
          </div>
       </div>
-
    </div>
 
 <!-- buttons login -->

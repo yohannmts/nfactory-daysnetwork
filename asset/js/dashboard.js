@@ -1,14 +1,13 @@
 
 // onclick sur btn connexion récupérer .val mail et password 
-function getValue() {
-  var input = 
-  document.getElementById("mail").value;
-  // Afficher la valeur
-  alert(input);
+
+function  controle(){
+var saisie = document.getElementById("boutton").value('Login');
+alert("Bien envoyer");
 }
 
 
-// créer une requete ajax post qui envoie submit, mail et password au script qui gère le login (index.php)
+// créer une requete ajax post qui envoie submit, mail et password au script qui gèrre le login (index.php)
 $.ajax({
     type: 'GET',
     url: './api/logs/index.php',
