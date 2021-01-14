@@ -1,16 +1,6 @@
 
 // onclick sur btn connexion récupérer .val mail et password 
-function getValue() {
-  var input = 
-  document.getElementById("mail").value;
-  // Afficher la valeur
-  alert(input);
-}
-
-
-
-
-// créer une requete ajax post qui envoie submit, mail et password au script qui gère le login (index.php)
+// créer une requete ajax post qui envoie submit, mail et password au script qui gèrre le login (index.php)
 $.ajax({
     type: 'GET',
     url: './api/logs/index.php',
@@ -45,6 +35,7 @@ $.ajax({
               labels: [
                 'Total',
                 'Perdu',
+                
               ]
             },
             options: {
@@ -66,7 +57,6 @@ const formatIntDouble = (int) => {
 const hexToIpv4 = (ip) => {
     ip.replace(/\r\n/g, '\n');
     var lines = ip.split('\n');
-
     var output = '';
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
