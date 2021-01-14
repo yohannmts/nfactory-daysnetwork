@@ -9,27 +9,28 @@ $sent = false;
 
 if (!empty($_POST['submit'])) {
 
-    $mail = checkXss($_POST['mail']);
     $firstname = checkXss($_POST['firstname']);
     $lastname = checkXss($_POST['lastname']);
+    $mail = checkXss($_POST['mail']);
     $subject = checkXss($_POST['subject']);
     $message = checkXss($_POST['message']);
 
+
+    $errors = checkField($errors, $firstname, 'firstname', 2, 150);
+    $errors = checkField($errors, $lastname, 'lastname', 2, 150);
     $errors = checkEmail($errors, $mail, 'mail');
-    $errors = checkField($errors, $mail, 'mail', 6, 160);
-    $errors = checkField($errors, $firstname, 'firstname', 2, 100);
-    $errors = checkField($errors, $lastname, 'lastname', 2, 100);
-    $errors = checkField($errors, $subject, 'subject', 10, 250);
-    $errors = checkField($errors, $message, 'message', 10, 2000);
+    $errors = checkField($errors, $mail, 'mail', 6, 200);
+    $errors = checkField($errors, $subject, 'subject', 2, 200);
+    $errors = checkField($errors, $message, 'message', 5, 2000);
+
 
     if (count($errors) == 0) {
-        insert($pdo, 'nd_contact', ['mail', 'firstname',  'lastname',  'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
+        insert($pdo, 'nd_contact', ['firstname',  'lastname',  'mail', 'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
         $sent = true;
     }
 }
 
 $title = 'Contact';
-
 
 include('src/template/header.php'); ?>
 
@@ -89,18 +90,11 @@ include('src/template/header.php'); ?>
                                     <div class="form-item webform-component webform-component-textfield webform-component--mail form-group form-item form-item-submitted-mail form-type-textfield form-group"> <label class="control-label" for="edit-submitted-mail">Mail*</label>
                                         <input class="form-control form-text" type="text" id="edit-submitted-mail" name="mail" size="60" maxlength="150" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                                                                                                 elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
-                                                                                                                                                                elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail'];
-                                                                                                                                                                ?>">
+                                                                                                                                                                elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']                                                                                                                                            ?>">
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-xs-12 no-padding">
-                                <div class="padding-03">
-                                    <div class="form-item webform-component webform-component-telephone webform-component--telepone form-group form-item form-item-submitted-telephone form-type-webform-telephone form-group"> <label class="control-label" for="edit-submitted-telephone">Téléphone*</label>
-                                        <input required="" class="telephone form-control form-text form-telephone required" type="tel" id="edit-submitted-telephone" name="submitted[telephone]" size="60">
-                                    </div>
-                                </div>
-                            </div> -->
+
                             <div class="col-xs-12 no-padding">
                                 <div class="padding-03">
                                     <div class="form-item webform-component webform-component-sujet webform-component--sujet form-group form-item form-item-submitted-sujet form-type-webform-sujet form-group"> <label class="control-label" for="edit-submitted-sujet">Le sujet de votre demande<span class="form-required" title="Ce champ est requis.">*</span></label>
@@ -145,7 +139,8 @@ include('src/template/header.php'); ?>
                     <?php if ($sent == false) : ?>
                         <input type="submit" name="submit" class="submitcontact btn btn-purple" value="Envoyer">
                     <?php else : ?>
-                        <input type="submit" class="submitsuccess btn btn-success" value="Bien reçu !" disabled>
+                        <input style="background-color: var(--pink); border-radius: 6px; padding: 10px 15px;
+" type="submit" class="submitsuccess btn btn-success" value="Bien reçu !" disabled>
                     <?php endif; ?>
                 </form>
             </div>

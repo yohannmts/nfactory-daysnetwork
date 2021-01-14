@@ -538,6 +538,8 @@ h1 {
 	margin-bottom: 25px;
 }
 
+
+
 /* faq */
 
 #faqgradient {
@@ -589,4 +591,56 @@ h1 {
 	color: rgba(0, 0, 0, 0.75)
 }
 
-/* style page de coonexion */
+/* page de connexion */
+
+#credentials label {
+	color: var(--darkblue);
+	font-weight: 700;
+}
+
+
+hr {
+	color: red;
+	font-weight: 700;
+
+}
+
+.forgotpw a {
+	font-style: italic;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--darkblue);
+}
+
+.close {
+	color: var(--darkblue);
+}
+
+.connect1 {
+	background-color: #ba2480;
+}
+
+.connect2 {
+	background-color: #ba2480;
+	margin-bottom: 35px;
+}
+
+.connectt {
+	background-color: #ba2480;
+	margin: 35px 0;
+}
+
+.forminscr {
+	margin-top: 100px;
+}
+
+.registerbutton .connect {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+
+.forminscr label {
+	color: #000;
+	font-weight: 700;
+}

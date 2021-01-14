@@ -113,6 +113,16 @@ function isLogged()
 }
 
 /**
+ * Vérifie si un utilisateur est connecté.
+ * 
+ * @return bool
+ */
+function isNotLogged()
+{
+    if (!empty($_SESSION['user'])) return false;
+    return true;
+}
+/**
  * Déconnecte l'utilisateur actuel.
  * 
  * @return void

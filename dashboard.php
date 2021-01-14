@@ -24,10 +24,7 @@ if (!empty($_POST['logout'])) logout();
 <button type="submit" name="logout" value="1" class="btn btn-danger">Se déconnecter</button>
 </div>
 </form>
-<canvas id="chart-area">
-
-
-</canvas>
+<canvas id="chart-area"></canvas>
 
 <div class="data text-dark"></div>
 
