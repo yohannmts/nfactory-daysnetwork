@@ -88,6 +88,14 @@ html, body {
 
 /* ++++++++++++++++++ NAVBAR +++++++++++++ */
 
+/* NAVBAR DASHBOARDL */
+.trame-tableau{
+	background-color: #2856ac;
+	text-justify: center;
+	left: 30%;
+	margin-left: 30%;
+}
+
 .navbar .container img {
 	width: 120px;
 	margin-top: -3px;
@@ -502,5 +510,9 @@ h5 {
 /* mentions légales */
 .legal-content p {
 	color:rgba(0, 0, 0, 0.75)
+}
+
+.centrer--mention{
+	text-align: center;
 }
 /* style page de coonexion */

@@ -46,6 +46,9 @@
               <a class="nav-link text-white" href="aboutus.php">Qui sommes-nous ?</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link text-white" href="dashboard.php">  </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-white" href="faq.php">F.A.Q</a>
             </li>
             <li class="nav-item">

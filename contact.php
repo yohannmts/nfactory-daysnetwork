@@ -31,12 +31,12 @@ if (!empty($_POST['submit'])) {
 $title = 'Contact';
 include('src/template/header.php');
 ?>
+
 <section id="contact">
     <div class="wrap-fluid">
         <div class="contact-form">
             <form action="" method="POST">
-
-                <div class="inputs-container">
+                 <div class="inputs-container">
                     <input type="mail" name="mail" placeholder="Votre mail" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                     elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail'];

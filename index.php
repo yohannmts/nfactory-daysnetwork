@@ -88,6 +88,7 @@ include('src/template/header.php');
          </form>
       <?php else : ?>
          <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Se connecter</button>
+         <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">S'inscrire</button>
       <?php endif; ?>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
@@ -113,6 +114,8 @@ include('src/template/header.php');
          </div>
       </div>
    </div>
+
+   
 
 
    <?php include('src/template/footer.php');
