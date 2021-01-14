@@ -564,24 +564,24 @@ h1 {
 
 /* mentions légales */
 
-#legal {
+#legalmention {
 	background: linear-gradient(grey, #757F9A);
 	margin-top: -49px;
 }
 
-#legal h1, h2, h3, p {
+#legalmention h1, h3 {
 	color: rgba(0, 0, 0, 0.75);
 }
 
-#legal h1, h3 {
+#legalmention h1, h3 {
 	font-weight: 700;
 }
 
-#legal h3 {
+#legalmention h3 {
 	margin-top: 18px;
 }
 
-#legal a {
+#legalmention a {
 	color: #ba2480;
 }
 
