@@ -53,12 +53,12 @@ if (!empty($_POST['submit'])) {
             $errors['password'] = 'Mot de passe incorrect';
          }
       } else {
-         header('Location: ./faq.php');
+         header('Location: ./inscription.php');
          die();
       }
    }
 }
-
+if (!empty($_POST['logout'])) logout();
 
 if (!empty($_POST['submit'])) {
    $firstname = checkXss($_POST['firstname']);
@@ -141,57 +141,6 @@ $title = 'Accueil';
 include('src/template/header.php');
 ?>
 
-<!-- carousel -->
-<div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
-
-   <div class="carousel-inner">
-      <div class="carousel-item active">
-         <img alt="First slide" class="d-block w-100" style="width: 1000px;height: 500px;" src="asset/img/font-reseaux.jpg">
-         <div class="carousel-caption d-none d-md-block">
-         </div>
-      </div>
-      <div class="carousel-item">
-         <img alt="Second slide" class="d-block w-100" style="width: 1000px;height: 500px;" src="asset/img/base-bleu.png">
-         <div class="carousel-caption d-none d-md-block">
-         </div>
-      </div>
-
-      <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-   </div>
-   <div class="container" align='center'>
-      <?php if (isLogged()) : ?>
-         <br>
-         <form action="" method="POST">
-            <button type="submit" name="logout" value="1" class="btn btn-danger">Se déconnecter</button>
-            <a href="./dashboard.php" class="btn btn-primary">Dashboard</a>
-         </form>
-      <?php else : ?>
-         <button id="btnclick" type="submit"  class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Se connecter</button>
-      <?php endif; ?>
-      <!-- Modal connexion -->
-      <div class="modal fade" id="myModal" role="dialog">
-         <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Connexion</h4>
-               </div>
-               <div class="modal-body">
-                  <form id="credentials" method="POST" action="">
-                     <label> Votre email</label>
-                     <input  type="email" onclick="getValue('mail')" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
-                     <br>
-                     <label> Votre mot de passe</label>
-                     <input type="password" onclick="getValue('password')" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
-                     <br>
-                     <input  type="submit" id="boutton" class="btn btn-success" name="submit" value="Se connecter"  onclick="controle('connecter')">
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
 
 <!-- buttons login -->
 <div class="container" align='center'>
