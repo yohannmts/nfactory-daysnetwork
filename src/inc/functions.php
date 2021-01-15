@@ -249,7 +249,9 @@ function delete($pdo, $table, $whereColumn, $whereValue)
     $query->bindValue(':whereValue', $whereValue);
     $query->execute();
 }
-
+function redirectTempo($value, $page) {
+    header("refresh:$value;url=$page");
+  }
 /**
  * Vérifie si un utilisateur est connecté en tant qu'administrateur.
  */

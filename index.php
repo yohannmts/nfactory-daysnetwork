@@ -189,51 +189,51 @@ include('src/template/header.php');
        <h2>Inscription</h2>
             <table>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="nom">Nom :</label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Votre nom" id="nom" name="lastname" value="<?php if(isset($nom)) {echo $nom; } ?>">
+                        <input class="ml-2 mb-3" type="text" placeholder="Votre nom" id="nom" name="lastname" value="<?php if(isset($nom)) {echo $nom; } ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="prénom">Prénom : </label>
                     </td>
                     <td>
-                        <input type="text" placeholder="Votre prénom" id="prénom" name="firstname" value="<?php if(isset($prénom)) {echo $prénom; } ?>">
+                        <input class="ml-2 mb-3" type="text" placeholder="Votre prénom" id="prénom" name="firstname" value="<?php if(isset($prénom)) {echo $prénom; } ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="mail">Mail : </label>
                     </td>
-                    <td align="right">
-                        <input type="email" placeholder="Votre Mail" id="mail" name="mail"  value="<?php if(isset($mail)) {echo $mail; } ?>">
+                    <td align="center">
+                        <input class="ml-2 mb-3" type="email" placeholder="Votre Mail" id="mail" name="mail"  value="<?php if(isset($mail)) {echo $mail; } ?>">
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="mail2">Confirmation mail : </label>
                     </td>
                     <td>
-                        <input type="email" placeholder="Confirmer adresse Mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) {echo $mail2; } ?>" >
+                        <input class="ml-2 mb-3" type="email" placeholder="Confirmer adresse Mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) {echo $mail2; } ?>" >
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="mdp">Mot de passe : </label>
                     </td>
                     <td>
-                        <input type="password" placeholder="Votre mot de passe" id="mdp" name="password">
+                        <input class="ml-2 mb-3" type="password" placeholder="Votre mot de passe" id="mdp" name="password">
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td align="center">
                         <label for="mdp2">Confirmer votre mot de passe : </label>
                     </td>
                     <td>
-                        <input type="password" placeholder="Votre mot de passe" id="mdp2" name="password-confirm">
+                        <input class="ml-2 mb-3" type="password" placeholder="Votre mot de passe" id="mdp2" name="password-confirm">
                     </td>
                 </tr>
                 <tr>
@@ -241,6 +241,7 @@ include('src/template/header.php');
                     <td align="center">
                         <br />
                         <input type="submit" class="connect2 btn btn-success" name="submit" value="S'inscrire">
+                        
                     </td>
                 </tr>
             </table>
@@ -276,5 +277,6 @@ include('src/template/header.php');
 
       <a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" role="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
    </div>
+
 
    <?php include('src/template/footer.php');

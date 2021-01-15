@@ -415,6 +415,7 @@ h1 {
 
 .class33{
 	font: 100;
+	font-size: 1.5em;
 }
 
 #shad {
@@ -623,7 +624,12 @@ h1 {
 }
 
 /* style page de connexion */
-
+#credentials h2, .forminscr h2 {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 40px;	
+}
 /* page de connexion */
 
 #credentials label {
@@ -664,6 +670,11 @@ hr {
 .connectt, .connect1, .connect2 {
 	background-color: #ba2480;
 	border-color: #ba2480;
+	margin: 35px 0;
+}
+.connectt:hover, .connect1:hover, .connect2:hover {
+	background-color: #8d1a61;
+	border-color: #8d1a61;
 	margin: 35px 0;
 }
 

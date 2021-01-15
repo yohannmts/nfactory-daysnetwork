@@ -30,8 +30,7 @@
                 <ul class="list-unstyled">
                   <li><a href="legal.php" target="blanck" class="smoothscroll">Mentions légales </a></li><br>
                   <li><a href="faq.php" target="C'est nous" class="smoothscroll">F.A.Q</a></li><br>
-                  <li><a href="contact.php" target="C'est nous" class="smoothscroll">Contact
-                      Us</a></li><br>
+                  <li><a href="contact.php" target="C'est nous" class="smoothscroll">Nous contacter</a></li><br>
                 </ul>
               </div>
               <div class="col-md-3 mx-auto">
@@ -54,9 +53,7 @@
               Copyright &copy;
               <script>
                 document.write(new Date().getFullYear());
-              </script> All rights reserved | This
-              website is developped
-              by Aurore, Steven, Demba & Yohann
+              </script> Tous droits réservés| Ce site a été developpé Aurore, Steven, Demba & Yohann
             </p>
           </div>
         </div>

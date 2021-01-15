@@ -127,7 +127,7 @@ include('src/template/header.php');?>
                                     <!-- back content -->
                                     <div class="back1">
                                         <h3> Nous visons l’excellence</h3><br>
-                                        <p>Nous remettons systématiquement en question nos pratiques et solutions pour vous s'apporter la qualité que vous s'attendiez.
+                                        <p>Nous remettons systématiquement en question nos pratiques et solutions pour vous apporter la qualité que vous attendiez.
                                         </p><br>
                                     </div>
                                 </div>
