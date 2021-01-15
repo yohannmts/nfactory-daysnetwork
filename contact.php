@@ -7,6 +7,7 @@ session_start();
 $errors = [];
 $sent = false;
 
+
 if (!empty($_POST['submit'])) {
 
     $firstname = checkXss($_POST['firstname']);
@@ -27,6 +28,7 @@ if (!empty($_POST['submit'])) {
     if (count($errors) == 0) {
         insert($pdo, 'nd_contact', ['firstname',  'lastname',  'mail', 'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
         $sent = true;
+        redirectTempo(5, 'index.php');
     }
 }
 
@@ -48,8 +50,8 @@ include('src/template/header.php'); ?>
                                 Support technique<br>
                                 un numéro unique pour nous joindre : </h2>
                             <a href="tel:+33123456789">01 23 45 67 89</a><br>
-                            Du lundi au vendredi<br>
-                            de 8h30 à 12h et de 14h à 17h30<br>
+                            Du lundi au dimanche, 24h/24h<br>
+                            <br>
                         </div>
                     </div>
                 </div> <br>
@@ -62,8 +64,8 @@ include('src/template/header.php'); ?>
                     <div>
                         <div id="requis" class="formcontact row no-padding text-center">
                             <div class="col-sm-12 no-padding">
-                                <div class="champsrequis padding-03">
-                                    <small class=" text-muted dark_blue">Les champs marqués d'une * sont requis.</small>
+                                <div  class="champsrequis padding-03">
+                                  Les champs marqués d'une * sont requis.
                                 </div>
                             </div>
                         </div>
@@ -136,18 +138,17 @@ include('src/template/header.php'); ?>
                             </div>
                         </div>
                     </div>
-                    <?php if ($sent == false) : ?>
+                    <?php if ($sent == false ) : ?>
                         <input type="submit" name="submit" class="submitcontact btn btn-purple" value="Envoyer">
-                    <?php else : ?>
+                    <?php else :   ?>
                         <input style="background-color: var(--pink); border-radius: 6px; padding: 10px 15px;
-" type="submit" class="submitsuccess btn btn-success" value="Bien reçu !" disabled>
+" type="submit" class="submitsuccess btn btn-success" value="Bien reçu ! Vous allez être redirigé vers la page d'accueil" disabled>
                     <?php endif; ?>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 
 <?php
 include('src/template/footer.php');
