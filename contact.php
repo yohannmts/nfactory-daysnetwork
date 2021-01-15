@@ -16,17 +16,16 @@ if (!empty($_POST['submit'])) {
     $subject = checkXss($_POST['subject']);
     $message = checkXss($_POST['message']);
 
-
-    $errors = checkField($errors, $firstname, 'firstname', 2, 150);
-    $errors = checkField($errors, $lastname, 'lastname', 2, 150);
     $errors = checkEmail($errors, $mail, 'mail');
     $errors = checkField($errors, $mail, 'mail', 6, 200);
+    $errors = checkField($errors, $firstname, 'firstname', 2, 150);
+    $errors = checkField($errors, $lastname, 'lastname', 2, 150);
     $errors = checkField($errors, $subject, 'subject', 2, 200);
     $errors = checkField($errors, $message, 'message', 5, 2000);
 
 
     if (count($errors) == 0) {
-        insert($pdo, 'nd_contact', ['firstname',  'lastname',  'mail', 'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
+        insert($pdo, 'nd_contact', ['firstname',  'lastname',  'mail', 'subject', 'message', 'created_at'], [$firstname, $lastname, $mail, $subject, $message, now()]);
         $sent = true;
         redirectTempo(5, 'index.php');
     }

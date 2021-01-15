@@ -12,10 +12,10 @@ $mail = checkXss($_POST['mail']);
 $subject = checkXss($_POST['subject']);
 $message = checkXss($_POST['message']);
 
-$errors = checkField($errors, $firstname, 'firstname', 2, 150);
-$errors = checkField($errors, $lastname, 'lastname', 2, 150);
 $errors = checkEmail($errors, $mail, 'mail');
 $errors = checkField($errors, $mail, 'mail', 6, 200);
+$errors = checkField($errors, $firstname, 'firstname', 2, 150);
+$errors = checkField($errors, $lastname, 'lastname', 2, 150);
 $errors = checkField($errors, $subject, 'subject', 10, 200);
 $errors = checkField($errors, $message, 'message', 10, 2000);
 
