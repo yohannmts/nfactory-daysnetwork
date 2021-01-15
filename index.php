@@ -142,8 +142,7 @@ include('src/template/header.php');
 
 <!-- buttons login -->
 <div class="container" align='center'>
-
-
+<h1 class="text-center text-dark mt-3">Bienvenue sur NETWORK DAYS</h1>
     <?php if (isLogged()) : ?>
         <br>
         <form action="" method="POST">
