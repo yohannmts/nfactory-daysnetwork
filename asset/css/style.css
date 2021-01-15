@@ -156,16 +156,6 @@ html, body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /*  ======================= PAGE 2 : Qui nous sommes ? ========================== */
 
 /* NOUS SOMMES NETWORK DAYS */
@@ -185,6 +175,7 @@ h1 {
 	border: 5px ridge --black;
 	text-decoration: underline;
 }
+
 
 /*  =================   description entreprise slides ====================== */
 
@@ -374,9 +365,6 @@ h1 {
 	color: var(--pink);
 }
 
-
-
-
 /* présentation de l'équipe */
 
 .wrap3 {
@@ -419,6 +407,14 @@ h1 {
 
 #namedev {
 	color: #ba2480;
+}
+
+#endessous-duprenom {
+	color: white;
+}
+
+.class33{
+	font: 100;
 }
 
 #shad {
@@ -682,3 +678,4 @@ hr {
 	color: #000;
 	font-weight: 700;
 }
+

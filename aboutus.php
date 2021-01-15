@@ -127,7 +127,7 @@ include('src/template/header.php');?>
                                     <!-- back content -->
                                     <div class="back1">
                                         <h3> Nous visons l’excellence</h3><br>
-                                        <p>Nous remettons systématiquement en question nos pratiques et solutions pour faire rimer PRTG avec qualité.
+                                        <p>Nous remettons systématiquement en question nos pratiques et solutions pour vous s'apporter la qualité que vous s'attendiez.
                                         </p><br>
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@ include('src/template/header.php');?>
             <div class="row">
                 <div class="col border rounded ml-3 mr-3 mb-3">
                     <h2 id="namedev" class="text-center mt-2">Yohann MATSIONA</h2><br>
-                    <h3 class="text-center mb-2 ">Chef de projet - développeur web</h3>
+                    <h3 id="endessous-duprenom"  class="text-center mb-2" id="color-titre" stu>Chef de projet - développeur web</h3>
                     <img src="asset/img/yohann.jpg" alt="" class="img-fluid border rounded-circle mb-2">
 
                     <p class="text-center">"Yohann, 25 ans. Tout simplement passionné par le développement web et l'architecture réseau."</p>
@@ -148,20 +148,20 @@ include('src/template/header.php');?>
                 <div class="col border rounded mr-3 mb-3">
 
                     <h2 id="namedev" class="text-center mt-2"> Steven RAKOTOARISOA</h2><br>
-                    <h3 class="text-center mb-2">Développeur web</h3>
+                    <h3 id="endessous-duprenom" class="text-center mb-2">Développeur web</h3>
                     <img src="asset/img/steven.png" alt="" class="img-fluid border rounded-circle mb-2">
                     <p class="text-center"> "Je me prénomme Steven Rakotoarisoa, 18 ans, ayant une forte passion pour l'informatique, plus particulièrement pour le développement web." </p>
                 </div>
                 <div class="col border rounded mr-3 mb-3">
                     <h2 id="namedev" class="text-center mt-2">Aurore FOURNIER</h2><br>
-                    <h3 class="text-center mb-2">Développeuse web</h3>
+                    <h3 id="endessous-duprenom"  class="text-center mb-2">Développeuse web</h3>
                     <img src="asset/img/aurore.jpg" alt="" class="img-fluid border rounded-circle mb-2">
                     <p class="text-center">"Moi c'est Aurore ! J'ai 31 ans, développeuse web et architecte réseau. L'informatique et le développement web sont devenus une vraie passion lors de ma reconversion."
                     </p>
                 </div>
                 <div class="col border rounded mr-3 mb-3">
                     <h2 id="namedev" class="text-center mt-2">Demba MBOW</h2><br>
-                    <h3 class="text-center mb-2">Développeur web</h3>
+                    <h3 id="endessous-duprenom"  class="text-center mb-2">Développeur web</h3>
                     <img src="asset/img/IMG_8840.JPG" class="img-fluid border rounded-circle mb-2" alt="">
                     <p class="text-center">"Je suis Demba MBOW, j'ai 20 ans, et je suis architecte de réseaux et Développeur web et passioné par l'informatique plus précisement dans le domaine du developpement Web."</p>
                 </div>
