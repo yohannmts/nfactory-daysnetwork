@@ -7,6 +7,7 @@ include('src/template/header.php'); ?>
 
 <section id="legalmention">
     <div class="wrap-solid">
+
         <div class="legal-content">
             <h1>Mentions légales</h1>
             <h3>1. Présentation du site.</h3>

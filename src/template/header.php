@@ -12,7 +12,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
   <link href="asset/css/style.css" rel="stylesheet">
-  
+
 
 
 <body>
@@ -22,7 +22,7 @@
     <!---------------------------- MENU BURGER --------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
       <div class="container">
-     
+
         <!------------- Début Logo  ----------->
         <img src="asset/img/logo-rose.png" alt="logo-rose">
         <!------------ Fin de logo  ----------->
@@ -33,9 +33,7 @@
         <!-- Fin de lien  -->
 
         <!-- Bouton du menu burger en mode responsive -->
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-          class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span
-            class="navbar-toggler-icon "></span></button>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon "></span></button>
         <!------------- Fin du bouton menu burger  ------->
         <!-- éléments de la navbar  -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,9 +58,3 @@
   </header>
   </nav>
   <!--==================== Fin du header  ====================================-->
-
-
-
-
-
-

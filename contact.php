@@ -30,7 +30,6 @@ if (!empty($_POST['submit'])) {
         $sent = true;
         redirectTempo(5, 'index.php');
     }
-
 }
 
 $title = 'Contact';
@@ -65,8 +64,8 @@ include('src/template/header.php'); ?>
                     <div>
                         <div id="requis" class="formcontact row no-padding text-center">
                             <div class="col-sm-12 no-padding">
-                                <div  class="champsrequis padding-03">
-                                  Les champs marqués d'une * sont requis.
+                                <div class="champsrequis padding-03">
+                                    Les champs marqués d'une * sont requis.
                                 </div>
                             </div>
                         </div>
@@ -139,7 +138,7 @@ include('src/template/header.php'); ?>
                             </div>
                         </div>
                     </div>
-                    <?php if ($sent == false ) : ?>
+                    <?php if ($sent == false) : ?>
                         <input type="submit" name="submit" class="submitcontact btn btn-purple" value="Envoyer">
                     <?php else :   ?>
                         <input style="background-color: var(--pink); border-radius: 6px; padding: 10px 15px;

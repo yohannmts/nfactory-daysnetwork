@@ -106,10 +106,8 @@ html, body {
 }
 
 .nav-item a:hover {
-	background-color: grey;
 	border-radius: 4px;
-	font-size: 1.7vw;
-	letter-spacing: 5px;
+	text-decoration: underline;
 	transition: 1.5s;
 }
 
@@ -173,7 +171,6 @@ h1 {
 	border: 5px ridge --black;
 	text-decoration: underline;
 }
-
 
 /*  =================   description entreprise slides ====================== */
 
@@ -413,7 +410,7 @@ h1 {
 	color: white;
 }
 
-.class33{
+.class33 {
 	font: 100;
 	font-size: 1.5em;
 }
@@ -624,12 +621,14 @@ h1 {
 }
 
 /* style page de connexion */
+
 #credentials h2, .forminscr h2 {
-    color: var(--black);
-    font-weight: 700;
-    font-size: 40px;
-    padding-bottom: 40px;	
+	color: var(--black);
+	font-weight: 700;
+	font-size: 40px;
+	padding-bottom: 40px;
 }
+
 /* page de connexion */
 
 #credentials label {
@@ -651,7 +650,6 @@ hr {
 	font-weight: 700;
 	text-decoration: none;
 	color: var(--darkblue);
-	
 }
 
 .close {
@@ -672,6 +670,7 @@ hr {
 	border-color: #ba2480;
 	margin: 35px 0;
 }
+
 .connectt:hover, .connect1:hover, .connect2:hover {
 	background-color: #8d1a61;
 	border-color: #8d1a61;
@@ -694,16 +693,17 @@ hr {
 }
 
 /* dashboard */
-.acacher{
+
+.acacher {
 	display: none;
 }
 
-.btnrose{
+.btnrose {
 	background-color: #ba2480;
 	border-color: #ba2480;
 }
 
-.btnrose:hover{
+.btnrose:hover {
 	background-color: #801958;
 	border-color: #801958;
 	/* opacity: 0.8; */

@@ -13,4 +13,3 @@ $errors = checkField($errors, $password, 'password', 6, 200);
 $errors = checkField($errors, $passwordConfirm, 'password-confirm', 6, 200);
 
 if ($password != $passwordConfirm) $errors['password-confirm'] == 'Les mots de passes ne sont pas identiques';
-

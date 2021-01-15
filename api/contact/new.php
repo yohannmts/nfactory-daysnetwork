@@ -22,12 +22,9 @@ $errors = checkField($errors, $message, 'message', 10, 2000);
 if (count($errors) == 0) {
     insert($pdo, 'nd_contact', ['firstname',  'lastname', 'mail', 'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
     $success = true;
-    
 }
 
 $data = [
     'errors' => $errors,
     'success' => $success
 ];
-
-
