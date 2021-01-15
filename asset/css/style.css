@@ -141,30 +141,18 @@ html, body {
 	line-height: 30px;
 }
 
-
 @media only screen and (max-width: 500px) {
-    .front {
-        justify-content: center;
-    }
-    .front {
-        width: 300px;
-        margin-bottom: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+	.front {
+		justify-content: center;
+	}
+	.front {
+		width: 300px;
+		margin-bottom: 20px;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /*  ======================= PAGE 2 : Qui nous sommes ? ========================== */
 
@@ -347,6 +335,7 @@ h1 {
 	/* color: #0094cd; */
 	padding-top: 155px;
 }
+
 /* back, initially hidden pane */
 
 .back {
@@ -357,10 +346,11 @@ h1 {
 .back1 {
 	font-size: 18px;
 }
-.back1 h3 {
-    color: var(--pink);
 
+.back1 h3 {
+	color: var(--pink);
 }
+
 .valeurs {
 	text-align: center;
 	padding-top: 30px;
@@ -373,9 +363,6 @@ h1 {
 	text-transform: uppercase;
 	color: var(--pink);
 }
-
-
-
 
 /* présentation de l'équipe */
 
@@ -552,6 +539,7 @@ h1 {
 .contactnum a {
 	color: var(--pink);
 	font-weight: 900;
+	line-height: 40px;
 }
 
 .legaldata {
@@ -567,8 +555,6 @@ h1 {
 .submitcontact, .submitsuccess {
 	margin-bottom: 25px;
 }
-
-
 
 /* faq */
 
@@ -592,7 +578,6 @@ h1 {
 
 #faq h3 {
 	color: var(--pink);
-
 }
 
 #faq p {
@@ -627,6 +612,7 @@ h1 {
 .legal-content p {
 	color: rgba(0, 0, 0, 0.75)
 }
+
 /* style page de connexion */
 
 /* page de connexion */
@@ -636,11 +622,13 @@ h1 {
 	font-weight: 700;
 }
 
+#credentials input[type=password] {
+	margin-right: 65px;
+}
 
 hr {
 	color: red;
 	font-weight: 700;
-
 }
 
 .forgotpw a {
@@ -648,6 +636,7 @@ hr {
 	font-weight: 700;
 	text-decoration: none;
 	color: var(--darkblue);
+	
 }
 
 .close {
@@ -663,8 +652,9 @@ hr {
 	margin-bottom: 35px;
 }
 
-.connectt {
+.connectt, .connect1, .connect2 {
 	background-color: #ba2480;
+	border-color: #ba2480;
 	margin: 35px 0;
 }
 
@@ -681,4 +671,34 @@ hr {
 .forminscr label {
 	color: #000;
 	font-weight: 700;
+}
+
+.champsrequis {
+	color: black;
+	padding-top: 25px;
+	font-weight: 700;
+}
+
+#credentials h2, .forminscr h2 {
+	color: var(--black);
+	font-weight: 700;
+	font-size: 40px;
+	padding-bottom: 40px;
+}
+
+.forminscr h2 {
+	margin-top: -45px;
+}
+
+.forminscr td label {
+	margin-right: 20px;
+	padding-left: -10px;
+}
+
+.forminscr input {
+	margin-right: 45px;
+}
+
+.forminscr input[type=submit] {
+	margin-right: 173px;
 }

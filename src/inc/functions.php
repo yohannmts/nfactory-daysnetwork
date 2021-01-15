@@ -139,7 +139,7 @@ function logout()
  */
 
 /**
- * Insert des valeurs dans la table d'une base de donnée.
+ * Insert des valeurs dans la table d'une base de données.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -250,7 +250,12 @@ function delete($pdo, $table, $whereColumn, $whereValue)
     $query->execute();
 }
 
+// redirection
+function redirectTempo($value, $page) {
+    header("refresh:$value;url=$page");
+  }
 
+  
 /**
  * Vérifie si un utilisateur est connecté en tant qu'administrateur.
  */
@@ -259,3 +264,4 @@ function delete($pdo, $table, $whereColumn, $whereValue)
 //     if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
 //     return false;
 // }
+
