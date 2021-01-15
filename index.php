@@ -147,8 +147,8 @@ include('src/template/header.php');
    <?php if (isLogged()) : ?>
       <br>
       <form action="" method="POST">
-         <button type="submit" name="logout" value="1" class="btn btn-danger">Se déconnecter</button>
-         <a href="./dashboard.php" class="btn btn-primary">Dashboard</a>
+         <button type="submit" name="logout" value="1" class="btn btn-danger mt-2 mb-2">Se déconnecter</button>
+         <a href="./dashboard.php" class="btn btn-primary mt-2 mb-2">Dashboard</a>
       </form>
    <?php else : ?>
       <button type="button" class="connectt btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Débuter l'aventure avec nous !</button>

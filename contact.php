@@ -27,6 +27,7 @@ if (!empty($_POST['submit'])) {
     if (count($errors) == 0) {
         insert($pdo, 'nd_contact', ['firstname',  'lastname',  'mail', 'subject', 'message', 'created_at'], [$mail, $firstname, $lastname, $subject, $message, now()]);
         $sent = true;
+        header('Location: ./index.php');
     }
 }
 

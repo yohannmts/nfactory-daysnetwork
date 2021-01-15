@@ -250,7 +250,6 @@ function delete($pdo, $table, $whereColumn, $whereValue)
     $query->execute();
 }
 
-
 /**
  * Vérifie si un utilisateur est connecté en tant qu'administrateur.
  */

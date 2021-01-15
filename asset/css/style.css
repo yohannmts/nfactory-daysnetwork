@@ -682,3 +682,19 @@ hr {
 	color: #000;
 	font-weight: 700;
 }
+
+/* dashboard */
+.acacher{
+	display: none;
+}
+
+.btnrose{
+	background-color: #ba2480;
+	border-color: #ba2480;
+}
+
+.btnrose:hover{
+	background-color: #801958;
+	border-color: #801958;
+	/* opacity: 0.8; */
+}
