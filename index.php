@@ -135,8 +135,6 @@ if (!empty($_POST['submit'])) {
 }
 
 
-
-
 $title = 'Accueil';
 include('src/template/header.php');
 ?>
@@ -151,7 +149,7 @@ include('src/template/header.php');
          <a href="./dashboard.php" class="btn btn-primary mt-2 mb-2">Dashboard</a>
       </form>
    <?php else : ?>
-      <button type="button" class="connectt btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Débuter l'aventure avec nous !</button>
+      <button type="button" class="connectt btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">Débutez l'aventure avec nous !</button>
    <?php endif; ?>
 
    <!-- Modal connexion -->
@@ -165,11 +163,12 @@ include('src/template/header.php');
             </div>
             <div class="modal-body">
                <form id="credentials" method="POST" action="">
-                  <label> Votre email</label>
+                   <h2>Connexion</h2>
+                  <label> Votre email : </label>
                   <input type="email" name="mail" placeholder="Votre email" value="<?= (!empty($_POST['mail'])) ? $_POST['mail'] : '' ?>">
                   <br>
                   <br>
-                  <label> Votre mot de passe</label>
+                  <label> Votre mot de passe : </label>
                   <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
                   <br>
                   <br>
@@ -187,10 +186,11 @@ include('src/template/header.php');
 <hr>
      
         <form class="forminscr" method="POST" action="">
+       <h2>Inscription</h2>
             <table>
                 <tr>
                     <td align="right">
-                        <label for="nom">Nom </label>
+                        <label for="nom">Nom :</label>
                     </td>
                     <td>
                         <input type="text" placeholder="Votre nom" id="nom" name="lastname" value="<?php if(isset($nom)) {echo $nom; } ?>">
@@ -198,7 +198,7 @@ include('src/template/header.php');
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="prénom">Prénom </label>
+                        <label for="prénom">Prénom : </label>
                     </td>
                     <td>
                         <input type="text" placeholder="Votre prénom" id="prénom" name="firstname" value="<?php if(isset($prénom)) {echo $prénom; } ?>">
@@ -206,7 +206,7 @@ include('src/template/header.php');
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mail">Mail </label>
+                        <label for="mail">Mail : </label>
                     </td>
                     <td align="right">
                         <input type="email" placeholder="Votre Mail" id="mail" name="mail"  value="<?php if(isset($mail)) {echo $mail; } ?>">
@@ -214,7 +214,7 @@ include('src/template/header.php');
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mail2">Confirmartion Mail </label>
+                        <label for="mail2">Confirmation mail : </label>
                     </td>
                     <td>
                         <input type="email" placeholder="Confirmer adresse Mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) {echo $mail2; } ?>" >
@@ -222,7 +222,7 @@ include('src/template/header.php');
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mdp">Mot de passe </label>
+                        <label for="mdp">Mot de passe : </label>
                     </td>
                     <td>
                         <input type="password" placeholder="Votre mot de passe" id="mdp" name="password">
@@ -230,7 +230,7 @@ include('src/template/header.php');
                 </tr>
                 <tr>
                     <td align="right">
-                        <label for="mdp2">Confirmer votre mot de passe             </label>
+                        <label for="mdp2">Confirmer votre mot de passe : </label>
                     </td>
                     <td>
                         <input type="password" placeholder="Votre mot de passe" id="mdp2" name="password-confirm">
@@ -241,7 +241,6 @@ include('src/template/header.php');
                     <td align="center">
                         <br />
                         <input type="submit" class="connect2 btn btn-success" name="submit" value="S'inscrire">
-
                     </td>
                 </tr>
             </table>
@@ -259,16 +258,6 @@ include('src/template/header.php');
       </div>
    </div>
 </div>
-
-
-<!-- Bouton execution modal -->
-<!-- <div class="registerbutton">
-   <button class="connect btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-      S'inscrire
-   </button>
-</div> -->
-
-
 
 <!-- carousel -->
 <div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">

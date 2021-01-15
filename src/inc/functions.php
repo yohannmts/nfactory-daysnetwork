@@ -139,7 +139,7 @@ function logout()
  */
 
 /**
- * Insert des valeurs dans la table d'une base de donnée.
+ * Insert des valeurs dans la table d'une base de données.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -258,3 +258,4 @@ function delete($pdo, $table, $whereColumn, $whereValue)
 //     if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
 //     return false;
 // }
+
